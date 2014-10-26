@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.8.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    baseName = 'rxjava-example'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    compile("io.reactivex:rxjava:1.0.0-rc.7")
+    compile('org.slf4j:slf4j-api:1.7.7')
+    compile('ch.qos.logback:logback-classic:1.1.2')
+    testCompile("junit:junit:4.11")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
