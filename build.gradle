@@ -35,6 +35,7 @@ dependencies {
     compile group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.3.0'
     compile group: 'com.squareup.retrofit2', name: 'adapter-rxjava', version: '2.3.0'
     compile group: 'io.reactivex', name: 'rxnetty-http', version: '0.5.2'
+    compile group: 'com.google.guava', name: 'guava', version: '23.0'
 
     // test packages
     testCompile("junit:junit:4.11")
